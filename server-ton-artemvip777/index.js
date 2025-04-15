@@ -29,7 +29,7 @@ const fetchRate = async () => {
   }
 };
 
-setInterval(fetchRate, 2000);
+setInterval(fetchRate, 15000);
 
 app.get('/api/rate', (req, res) => {
   res.json(latestRate);
