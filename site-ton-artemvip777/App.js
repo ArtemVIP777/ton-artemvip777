@@ -46,7 +46,7 @@ function App() {
 
   useEffect(() => {
     // 🟦 ЗАМЕНИ на свой адрес после деплоя сервера!
-    const ws = new window.WebSocket('wss://server-ton-artemvip777.onrender.com');
+    const ws = new window.WebSocket('https://ton-artemvip777.onrender.com');
     ws.onmessage = (msg) => {
       const { type, data } = JSON.parse(msg.data);
       if (type === 'rate') setRate(data.ton_usdt);
